@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form styling</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        /* 
+        - box-sizing property-г border-box утгатайгаар бичиж өг
+        - margin болон padding-ийг reset хий
+       */
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+      }
+
+      body {
+        /* 
+        Дэвсгэр өнгийг #344a72-оор тавь
+        */
+        min-height:100%;
+    width: 100%;
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/img/b-1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+      }
+
+      a {
+        text-decoration: none;
+        /* 
+        доогуур зураас (underline) муухай харагддаг учир түүнийг зайлуулаарай
+       */
+      }
+
+      #container {
+        margin:50px auto;
+        max-width: 400px;
+        padding: 15px;
+        line-height: 1.8em;
+        /* 
+        - margin-auto нь хоёр талаасаа ижил зай авч block элементийг голлуулдгийг битгий мартаарай
+        илүү 
+        - илүү responsive болгохын тулд max-width тавьж өгөөрэй
+        - бага зэрэг padding хийгээрэй
+        */
+      }
+
+      .form-wrap {
+        background: whitesmoke;
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin: 20px;
+        /*
+          энэ нь формын гадуурх цагаан талбарыг хийж өгнө
+        */
+      }
+
+      .form-wrap h1,
+      .form-wrap p {
+        text-align: center;
+
+        /* 
+          голлуулах хэрэгтэй
+        */
+      }
+
+      .form-wrap .form-group {
+         margin-top: 15px;
+        /* 
+          бүх гарчиг, input нь .form-group гэсэн класс-аар хүрээлэгдсэн байна
+        */
+      }
+
+      .form-wrap .form-group label {
+        display: block;
+        /* 
+          гарчигуудыг block элемент болгоорой
+        */
+      }
+
+      .form-wrap .form-group input {
+        width: 100%;
+        padding: 5px;
+      }
+      .form-wrap button {
+        display: block;
+        width: 100%;
+        background: #49c1a2;
+        margin-top: 20px;
+        /* 
+          товчлуур мөн 100 хувь өргөнтэй байх хэрэгтэй. block элемент болго. 
+          товчлуурын өнгийг #49c1a2 кодоор өг
+        */
+      }
+
+      .form-wrap button:hover {
+        color: #37a08e;
+        /* 
+          товчлуур дээр хулганын заагч очиход өөрчлөгдөх өнгийг  #37a08e кодоор хийж өг.
+        */
+        
+      }
+
+      .form-wrap .bottom-text {
+        font-size: 12px;
+        /* 
+          доод талын текстийг жижигрүүл
+        */
+        
+      }
+
+      footer {
+        text-align: center;
+        /* 
+        голлуулаарай
+       */
+
+      }
+
+      footer a {
+        color: #49c1a2;
+        /* 
+          footer-ийн өнгийг #49c1a2 кодоор хийж өг
+        */
+        }
+        footer a:hover{
+          color: aliceblue;
+        }
+        footer p{
+            color: wheat;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-wrap">
+        <h1>Бүртгүүлэх</h1>
+        <p>Бүртгэл үнэ төлбөргүй</p>
+        <form>
+          <div class="form-group">
+            <label for="first-name">Таны нэр</label>
+            <input type="text" name="firstName" id="first-name" />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Таны овог</label>
+            <input type="text" name="lastName" id="last-name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Таны и-мэйл</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="password">Нууц үгээ бичнэ үү</label>
+            <input type="password" name="password" id="password" />
+          </div>
+          <div class="form-group">
+            <label for="password2">Нууц үгээ давтан бичнэ үү</label>
+            <input type="password" name="pasword2" id="password2" />
+          </div>
+          <button type="submit" class="btn">Бүртгүүлэх</button>
+          <p class="bottom-text">
+            Бүртгүүлэх товчлуурыг дарснаар та манай
+            <a href="#">Гэрээний нөхцлүүд</a>-ийг зөвшөөрсөн болно.
+          </p>
+        </form>
+      </div>
+      <footer>
+        <p>Өмнө бүртгүүлсэн бол <a href="#">Нэвтрэх</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
